@@ -1,24 +1,5 @@
-<div>
-    <table>
-        <thead>
-          
-            <tr>
-               
-                <th>
-                     id
-                </th>
-                <th>
-                    Name
-               </th>
-               @foreach ($cursos as $curso)
-            </tr>
-            <tr>
-                <td>{{ $curso->id }}</td>
-                <td>  {{ $curso->name }}</td>
-            </tr>
-            
-        </thead>
-      
-        @endforeach
-    </table>
+<div class="grid grid-cols-3 gap-4 mt-8">
+    @foreach ($cursos as $curso)
+        <x-course-card :curso="$curso"/>
+    @endforeach
 </div>
